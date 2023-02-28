@@ -85,7 +85,7 @@ const MainPage = () => {
     useEffect(() => {
         setTimeout(() => {
             getTasks()
-        }, 1900)
+        }, 1000)
     }, [getTasks])
 
     if (tasks === null) {
