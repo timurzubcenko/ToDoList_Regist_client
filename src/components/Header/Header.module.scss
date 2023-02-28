@@ -1,0 +1,35 @@
+.header {
+    background: #fff;
+    padding: 20px;
+    color: #5f5f5f;
+    border-bottom: 1px solid #dcdcdc;
+    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.10);
+
+
+    .in_header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        h2 {
+            font-weight: 300;
+        }
+
+        .btn {
+            padding: 8px 10px;
+            font-size: 16px;
+            outline: none;
+            border: none;
+            cursor: pointer;
+            color: #608BFF;
+            border-bottom: 1px solid #608BFF;
+            background: transparent;
+            transition: all 0.3s;
+        }
+
+        .btn:hover {
+            border-bottom: 1px solid #405fb5;
+            color: #405fb5;
+        }
+    }
+}
