@@ -28,7 +28,7 @@
             input {
                 background: transparent;
                 border: 1px solid transparent;
-                box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
+                box-shadow: inset 0px 4px 10px rgba(0, 0, 0, 0.15);
                 border-radius: 5px;
                 outline: none;
                 font-size: 14px;
@@ -47,6 +47,13 @@
                 border: 1px solid #8ba8bb;
                 box-shadow: 0px 2px 2px 0px #8ba8bb80;
             }
+        }
+
+        .error {
+            text-align: center;
+            font-weight: 300;
+            color: #e45454;
+            padding: 10px 0;
         }
 
         .navigate_btns {
