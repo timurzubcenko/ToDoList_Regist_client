@@ -16,6 +16,8 @@ const RegisterPage = () => {
         password: '',
     })
 
+    const [error, setError] = useState('')
+
     const onChange = (e) => {
         setUser({ ...user, [e.target.name]: e.target.value })
     }
@@ -28,11 +30,9 @@ const RegisterPage = () => {
                     console.log(res.data)
                     navigate('/login')
                 })
-                .catch((err) => {
-                    console.log(err)
-                })
         }
         catch (err) {
+            setError(err.response.data.msg)
             console.log(err)
         }
     }
@@ -60,6 +60,9 @@ const RegisterPage = () => {
                         name='password'
                         type="password" />
                 </div>
+                <h3 className={s.error}>
+                    {error}
+                </h3>
                 <div className={s.navigate_btns}>
                     <Link className={s.link} to='/login'>Уже есть аккаунт?</Link>
                     <button className={s.btn} onClick={onSubmit} >Зарегистрироваться</button>
