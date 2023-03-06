@@ -8,6 +8,7 @@ const MyRoute = ({ isLogin }) => {
     if (isLogin) {
         return (
             <Routes>
+                <Route path='/' element={<MainPage />} />
                 <Route path='/main' element={<MainPage />} />
                 <Route path="*" element={<Navigate to={'/main'} />} />
                 <Route path='/login' element={<Navigate to={'/main'} />} />
@@ -17,6 +18,7 @@ const MyRoute = ({ isLogin }) => {
     }
     return (
         <Routes>
+            <Route path='/' element={<LoginPage />} />
             <Route path='/register' element={<RegisterPage />} />
             <Route path='/login' element={<LoginPage />} />
             <Route path='/main' element={<Navigate to={'/login'} />} />
