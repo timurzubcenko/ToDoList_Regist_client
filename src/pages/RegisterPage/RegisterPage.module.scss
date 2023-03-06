@@ -49,6 +49,13 @@
             }
         }
 
+        .error {
+            text-align: center;
+            font-weight: 300;
+            color: #e45454;
+            padding: 10px 0;
+        }
+
         .navigate_btns {
             display: flex;
             flex-direction: column;
