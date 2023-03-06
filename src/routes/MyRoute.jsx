@@ -10,7 +10,7 @@ const MyRoute = ({ isLogin }) => {
             <Routes>
                 <Route path='/' element={<MainPage />} />
                 <Route path='/main' element={<MainPage />} />
-                <Route path="*" element={<Navigate to={'/main'} />} />
+                <Route path="*" element={<Navigate to={'/'} />} />
                 <Route path='/login' element={<Navigate to={'/main'} />} />
                 <Route path='/' element={<Navigate to={'/main'} />} />
             </Routes>
@@ -22,7 +22,7 @@ const MyRoute = ({ isLogin }) => {
             <Route path='/register' element={<RegisterPage />} />
             <Route path='/login' element={<LoginPage />} />
             <Route path='/main' element={<Navigate to={'/login'} />} />
-            <Route path="*" element={<Navigate to={'/login'} />} />
+            <Route path="*" element={<Navigate to={'/'} />} />
         </Routes>
     );
 };
