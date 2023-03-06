@@ -90,3 +90,19 @@
         }
     }
 }
+
+@media (max-width: 410px) {
+    .task {
+        .desc {
+            width: 150px;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    .task {
+        .desc {
+            width: 100px;
+        }
+    }
+}
