@@ -15,6 +15,8 @@ const LoginPage = () => {
         password: '',
     })
 
+    const [error, setError] = useState('')
+
     const { login } = useContext(AuthContext)
 
     const onChange = (e) => {
@@ -29,12 +31,10 @@ const LoginPage = () => {
                     login(res.data.token, res.data.name, res.data.userId,)
                     navigate('/')
                 })
-                .catch((err) => {
-                    console.log(err)
-                })
         }
         catch (err) {
-            console.log(err)
+            setError(err.response.data.msg)
+            console.log(err.response.data.msg)
         }
     }
 
@@ -55,6 +55,9 @@ const LoginPage = () => {
                         name='password'
                         type="password" />
                 </div>
+                <h3 className={s.error}>
+                    {error}
+                </h3>
                 <div className={s.navigate_btns}>
                     <Link className={s.link} to='/register'>Нет аккаунта?</Link>
                     <button className={s.btn} onClick={onSubmit} >Войти</button>
